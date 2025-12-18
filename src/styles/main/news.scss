@@ -1,0 +1,49 @@
+.news {
+  &--translate-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all $transition;
+
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &--translate-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all $transition;
+
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  &__period {
+    margin-top: 20px;
+
+    @include on-tablet {
+      margin-top: 30px;
+    }
+    
+    @include on-desktop {
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    margin-top: 20px;
+  }
+}

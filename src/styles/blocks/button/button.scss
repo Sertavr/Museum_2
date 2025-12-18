@@ -1,0 +1,47 @@
+.button {
+  @include button;
+  @include hover(box-shadow, -1px 5px 14px 2px rgba(173, 47, 47, 0.74));
+  @include hover(transform, translateY(-3px));
+  @include hover(background-color, $hover-red-button);
+
+  &--light-shadow{
+    @include hover(box-shadow, 0 3px 14px 2px rgba(232,213,213,0.74));
+
+
+  }
+
+  &:active {
+    background-color: $active-red-button;
+  }
+
+  &:disabled {
+    background-color: $disabled-red-button;
+  }
+
+  &--light {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+    border: 1px solid $main-red-button;
+    color: $main-red-button;
+    background-color: $main-white;
+
+    @include hover(color, $hover-red-button);
+    @include hover(border-color, $hover-red-button);
+    @include hover(background-color, $main-white);
+    @include hover(box-shadow, -1px 5px 14px 2px rgba(173, 47, 47, 0.74));
+    @include hover(transform, translateY(-3px));
+
+    &:active {
+      border-color: $active-red-button;
+      color: $active-red-button;
+    }
+
+    &:disabled {
+      border-color: $disabled-red-button;
+      color: $disabled-red-button;
+    }
+  }
+}

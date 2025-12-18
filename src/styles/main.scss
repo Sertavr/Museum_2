@@ -1,7 +1,35 @@
 @import 'utils';
 @import 'fonts';
 @import 'typography';
+@import './header/header';
+@import './header/top-bar';
+@import './blocks/button/button';
+@import './blocks/nav/nav';
+@import './aside/menu';
+@import './main/main-block';
+@import './footer/footer';
 
 body {
+  margin: 0;
   background: $c-gray;
+}
+
+.page {
+  position: relative;
+  scroll-behavior: smooth;
+
+  &__menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all $transition;
+
+    &:target {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

@@ -1,0 +1,80 @@
+.form {
+  &__input {
+    outline: none;
+    border: none;
+    display: block;
+    background-color: $c-gray;
+    border-bottom: 1px solid $title-black;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    transition: all $transition;
+
+    @include on-desktop {
+      margin-bottom: 40px;
+    }
+
+    &::placeholder {
+      content: 'e-mail';
+      font-family: Raleway, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: $title-black;
+      transition: all $transition;
+    }
+
+    &:hover {
+      border-color: $main-red-button;
+
+      &::placeholder {
+        color: $main-red-button;
+      }
+    }
+
+    &:focus {
+      color: $main-red-button;
+      border-color: $main-red-button;
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+      border-color: $main-red-button;
+    }
+
+    &--filled {
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      vertical-align: middle;
+      color: $title-black;
+      border-color: $title-black;
+
+      &:focus {
+        border-color: $title-black;
+        color: $title-black;
+      }
+    }
+  }
+
+  &__input-button {
+    all: unset;
+    width: 100%;
+    cursor: pointer;
+
+    @include button;
+    @include hover(background-color, $hover-red-button);
+
+    &:active {
+      background-color: $active-red-button;
+    }
+
+    &:disabled {
+      background-color: $disabled-red-button;
+      cursor: not-allowed;
+    }
+  }
+}

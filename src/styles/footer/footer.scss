@@ -1,0 +1,158 @@
+.footer {
+  background-color: $main-gray;
+  padding-block: 35px 30px;
+
+  @include page-grid;
+  @include content-padding-inline;
+
+  &__contacts {
+    margin-bottom: 50px;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / span 2;
+      margin-bottom: 60px;
+    }
+    
+    @include on-desktop {
+      grid-column: 1 / span 3;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__title {
+    color: $main-white;
+    margin-bottom: 10px;
+
+    @include on-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $main-white;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include underscore;
+  }
+
+  &__wrapper-email {
+    padding-bottom: 30px;
+
+    @include on-tablet {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    @include hover(transform, scale(1.2));
+
+    &--face {
+      background-image: url('../images/icons/facebook-icon.svg');
+    }
+
+    &--twit {
+      background-image: url('../images/icons/twitter-icon.svg');
+    }
+
+    &--teleg {
+      background-image: url('../images/icons/telegram-icon.svg');
+    }
+
+    &--inst {
+      background-image: url('../images/icons/instagram-icon.svg');
+    }
+  }
+
+  &__sicial-media-link {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__schedul {
+    margin-bottom: 50px;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 3 / span 2;
+      margin-bottom: 60px;
+    }
+
+    @include on-desktop {
+      grid-column: 5 / span 4;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__wrapper-nav {
+    margin-bottom: 50px;
+
+    @include on-tablet {
+      margin-bottom: 60px;
+      grid-column: 5 / -1;
+    }
+
+    @include on-desktop {
+      grid-column: 9 / -1;
+    }
+  }
+
+  &__work-time {
+    color: $main-white;
+  }
+
+  &__link-title {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+
+    @include underscore;
+  }
+
+  &__wrapper-legal {
+    display: flex;
+    gap: 22px;
+  }
+
+  &__privacy-terms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-column: 1 / -1;
+  }
+
+  &__legal {
+    color: $main-white;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  &__up-arrow {
+    background-image: url('../images/icons/up-arrow-icon.svg');
+    width: 30px;
+    height: 30px;
+
+    @include hover(transform, scale(1.2));
+  }
+}

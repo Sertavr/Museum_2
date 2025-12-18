@@ -1,6 +1,101 @@
 @mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
+  transition: all $transition;
   &:hover {
     #{$_property}: $_toValue;
   }
+}
+
+@mixin on-tablet {
+  @media (min-width: $table-min-width) {
+    @content;
+  }
+}
+
+@mixin on-tablet-max {
+  @media (min-width: 705px) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin on-design {
+  @media (min-width: $design-min-width) {
+    @content;
+  }
+}
+
+@mixin content-padding-inline {
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 39px;
+  }
+
+  @include on-desktop {
+    padding-inline: 55px;
+  }
+
+  @include on-design {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+@mixin page-grid {
+  --columns: 2;
+
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include on-tablet {
+    --columns: 6;
+    
+    column-gap: 30px;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+  }
+}
+
+@mixin button {
+  display: block;
+  text-decoration: none;
+  max-width: 330px;
+  height: 60px;
+  background-color: $main-red-button;
+  color: $main-white;
+  font-family: Raleway, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 60px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@mixin underscore {
+position: relative;
+
+&::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: #f1f5f4;
+      bottom: -3px;
+      transform: scale(0);
+      transform-origin: left;
+      transition: transform $transition;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
 }

@@ -1,0 +1,53 @@
+.plan {
+  background-color: $main-gray;
+  position: relative;
+
+  @include content-padding-inline;
+  @include page-grid;
+
+  &__info {
+    padding-block: 50px;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      padding-block: 80px;
+      grid-column: 1 / span 5;
+    }
+    
+    @include on-desktop {
+      padding-block: 205px;
+      grid-column: 6 / -1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $main-white;
+  }
+
+  &__description {
+    margin-block: 20px 40px;
+    color: $main-white;
+
+    @include on-tablet {
+      margin-block: 20px 60px;
+    }
+
+    @include on-desktop {
+      margin-block: 10px 50px;
+    }
+  }
+
+  &__img-container {
+    display: none;
+
+    @include on-desktop {
+      display: block;
+      position: absolute;
+      width: 555px;
+      height: 100%;
+      background-image: url('../images/plan/plan.webp');
+      background-repeat: no-repeat;
+    }
+  }
+}

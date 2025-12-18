@@ -1,0 +1,88 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  @include on-tablet {
+    height: 77px;
+  }
+  
+  @include on-desktop {
+    height: 90px;
+  }
+
+  &__logo {
+    background-image: url('../images/icons/logo.svg');
+    background-size: contain;
+    background-position: center;
+    width: 123px;
+    height: 40px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__burger-memu {
+    display: block;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+
+    background-size: cover;
+
+    @include hover(scale, 1.2);
+
+    &--open {
+      background-image: url('../images/icons/burger-menu-icon.svg');
+
+      @include hover(
+        background-image,
+        url('../images/icons/menu-hover-icon.svg')
+      );
+    }
+
+    &--close {
+      background-image: url('../images/icons/close-icon.svg');
+    }
+  }
+
+  &__lang {
+    display: none;
+
+    @include on-tablet {
+      display: block;
+    }
+
+    &--mobile {
+      display: block;
+      order: -1;
+
+      @include on-tablet {
+        order: 0;
+      }
+    }
+  }
+
+  &__select {
+    background-color: $main-gray;
+    border: none;
+    outline: none;
+    color: $main-white;
+    cursor: pointer;
+  }
+
+  &__option {
+    color: $main-white;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
