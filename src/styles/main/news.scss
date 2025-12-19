@@ -1,4 +1,5 @@
 .news {
+
   &--translate-left {
     opacity: 0;
     transform: translateX(-100px);
@@ -33,7 +34,7 @@
     @include on-tablet {
       margin-top: 30px;
     }
-    
+
     @include on-desktop {
       margin-top: 20px;
     }

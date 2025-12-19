@@ -1,5 +1,7 @@
 .section {
   padding-block: 90px 30px;
+  overflow-x: hidden;
+
 
   @include content-padding-inline;
   @include page-grid;
@@ -13,7 +15,7 @@
       grid-column: 1 / 5;
       grid-row: 1;
     }
-    
+
     @include on-desktop {
       grid-column: 1 / 7;
       grid-row: 1;
@@ -26,6 +28,7 @@
     gap: 60px;
     padding-bottom: 30px;
     grid-column: 1 / -1;
+    overflow-x: hidden;
 
     @include on-tablet {
       flex-direction: row;

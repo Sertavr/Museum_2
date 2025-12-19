@@ -45,74 +45,76 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="header__top-bar top-bar">
-        <div class="top-bar__logo"></div>
+    <div class="page__container">
+      <header class="header">
+        <div class="header__top-bar top-bar">
+          <div class="top-bar__logo"></div>
 
-        <div class="top-bar__menu">
-          <a
-            class="top-bar__burger-memu top-bar__burger-memu--open"
-            href="#menu"
-          ></a>
+          <div class="top-bar__menu">
+            <a
+              class="top-bar__burger-memu top-bar__burger-memu--open"
+              href="#menu"
+            ></a>
 
-          <form
-            class="top-bar__lang"
-            action="#"
-            method="post"
-          >
-            <select class="top-bar__select">
-              <option
-                class="top-bar__option"
-                value="UA"
-              >
-                UA
-              </option>
-              <option
-                class="top-bar__option"
-                value="EN"
-              >
-                EN
-              </option>
-            </select>
-          </form>
+            <form
+              class="top-bar__lang"
+              action="#"
+              method="post"
+            >
+              <select class="top-bar__select">
+                <option
+                  class="top-bar__option"
+                  value="UA"
+                >
+                  UA
+                </option>
+                <option
+                  class="top-bar__option"
+                  value="EN"
+                >
+                  EN
+                </option>
+              </select>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div class="header__center">
-        <p class="header__paragraph header__paragraph--before-title">
-          10 серпня - 10 листопада
-        </p>
-        <h1 class="header__title">Мистецтво ХІХ - ХХ ст.</h1>
-        <p class="header__paragraph header__paragraph--after-title">
-          Внесок українських митців у світову культуру 19-20 ст.
-        </p>
+        <div class="header__center">
+          <p class="header__paragraph header__paragraph--before-title">
+            10 серпня - 10 листопада
+          </p>
+          <h1 class="header__title">Мистецтво ХІХ - ХХ ст.</h1>
+          <p class="header__paragraph header__paragraph--after-title">
+            Внесок українських митців у світову культуру 19-20 ст.
+          </p>
 
-        <a
-          href="#"
-          class="button button--light-shadow"
-        >
-          Купити квиток
-        </a>
-      </div>
+          <a
+            href="#"
+            class="button button--light-shadow"
+          >
+            Купити квиток
+          </a>
+        </div>
 
-      <div class="header__wrapper-hr">
-        <h6 class="header__date">10.08 - 10.11</h6>
-        <div class="header__hr"></div>
-      </div>
+        <div class="header__wrapper-hr">
+          <h6 class="header__date">10.08 - 10.11</h6>
+          <div class="header__hr"></div>
+        </div>
 
-      <div class="header__image-container">
-        <img
-          class="header__image"
-          srcset="
-            ./images/mobile-header.webp   320w,
-            ./images/tablet-header.webp   640w,
-            ./images/desktop-header.webp 1280w
-          "
-          src="./images/mobile-header.webp"
-          alt="Дівчина з Поділля"
-        />
-      </div>
-    </header>
+        <div class="header__image-container">
+          <img
+            class="header__image"
+            srcset="
+              ./images/mobile-header.webp   320w,
+              ./images/tablet-header.webp   640w,
+              ./images/desktop-header.webp 1280w
+            "
+            src="./images/mobile-header.webp"
+            alt="Дівчина з Поділля"
+          />
+        </div>
+      </header>
+    </div>
     <aside
       class="page__menu menu"
       id="menu"
@@ -494,112 +496,117 @@
         </form>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__contacts">
-        <h5 class="footer__title">Контакти</h5>
 
-        <address class="footer__address">
-          <a
-            href="https://maps.app.goo.gl/zHVtyqdZ3yNXRBKm7"
-            class=" footer__link"
-            target="_blank"
-          >
-            Київ, вул. М. Грушевського, 6
+    <div class="page__container">
+      <footer class="footer">
+        <div class="footer__contacts">
+          <h5 class="footer__title">Контакти</h5>
+
+          <address class="footer__address">
+            <a
+              href="https://maps.app.goo.gl/zHVtyqdZ3yNXRBKm7"
+              class=" footer__link"
+              target="_blank"
+            >
+              Київ, вул. М. Грушевського, 6
+            </a>
+          </address>
+
+          <div class="footer__wrapper-tel">
+            <a href="tel:+380442781357" class="footer__link">278-13-57</a>,
+            <a href="tel:+380442787454" class="footer__link">278-74-54</a>
+          </div>
+
+          <div class="footer__wrapper-email">
+            <a href="mailto:info@namu.kiev.ua" class="footer__link">info@namu.kiev.ua</a>
+          </div>
+
+          <div class="footer__social-media">
+            <div class="footer__icon footer__icon--face">
+              <a
+                href="https://www.facebook.com/namu.museum/"
+                class="footer__sicial-media-link"
+                target="_blank"></a>
+            </div>
+            <div class="footer__icon footer__icon--twit">
+              <a
+                href="https://x.com/NAMU_120"
+                class="footer__sicial-media-link"
+                target="_blank"></a>
+            </div>
+            <div class="footer__icon footer__icon--teleg">
+              <a
+                href="https://t.me/namu_museum120"
+                class="footer__sicial-media-link"
+                target="_blank"></a>
+            </div>
+            <div class="footer__icon footer__icon--inst">
+              <a
+                href="https://www.instagram.com/namu.museum/"
+                class="footer__sicial-media-link"
+                target="_blank"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__schedul">
+          <h5 class="footer__title">Розклад роботи</h5>
+          <p class="footer__work-time">
+            ПН: вихідний <br>
+            ВТ: вихідний <br>
+            СР: 10:00 - 17:00 <br>
+            ЧТ: 10:00 - 17:00 <br>
+            ПТ: 12:00 - 19:00 <br>
+            СБ: 11:00 - 18:00 <br>
+            НД: 10:00 - 17:00
+          </p>
+        </div>
+        <div class="footer__wrapper-nav">
+          <a href="#" class="footer__link-title">
+            <h5 class="footer__title">Головна</h5>
           </a>
-        </address>
-
-        <div class="footer__wrapper-tel">
-          <a href="tel:+380442781357" class="footer__link">278-13-57</a>,
-          <a href="tel:+380442787454" class="footer__link">278-74-54</a>
+          <nav class="footer__nav nav">
+            <ul class="nav__list nav__list--footer">
+              <li class="nav__item">
+                <a
+                  href="#exhibitions"
+                  class="nav__link nav__link--footer"
+                >
+                  Виставки
+                </a>
+              </li>
+              <li class="nav__item ">
+                <a
+                  href="#events"
+                  class="nav__link nav__link--footer"
+                >
+                  Події
+                </a>
+              </li>
+              <li class="nav__item">
+                <a
+                  href="#news"
+                  class="nav__link nav__link--footer"
+                >
+                  Новини
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
+        <div class="footer__privacy-terms">
 
-        <div class="footer__wrapper-email">
-          <a href="mailto:info@namu.kiev.ua" class="footer__link">info@namu.kiev.ua</a>
+          <div class="footer__wrapper-legal">
+            <div class="footer__legal">© 2010 — 2020</div>
+            <div class="footer__legal">Privacy — Terms</div>
+          </div>
+
+          <a href="#" class="footer__up-arrow"></a>
         </div>
+      </footer>
+    </div>
 
-        <div class="footer__social-media">
-          <div class="footer__icon footer__icon--face">
-            <a
-              href="https://www.facebook.com/namu.museum/"
-              class="footer__sicial-media-link"
-              target="_blank"></a>
-          </div>
-          <div class="footer__icon footer__icon--twit">
-            <a
-              href="https://x.com/NAMU_120"
-              class="footer__sicial-media-link"
-              target="_blank"></a>
-          </div>
-          <div class="footer__icon footer__icon--teleg">
-            <a
-              href="https://t.me/namu_museum120"
-              class="footer__sicial-media-link"
-              target="_blank"></a>
-          </div>
-          <div class="footer__icon footer__icon--inst">
-            <a
-              href="https://www.instagram.com/namu.museum/"
-              class="footer__sicial-media-link"
-              target="_blank"></a>
-          </div>
-        </div>
-      </div>
 
-      <div class="footer__schedul">
-        <h5 class="footer__title">Розклад роботи</h5>
-        <p class="footer__work-time">
-          ПН: вихідний <br>
-          ВТ: вихідний <br>
-          СР: 10:00 - 17:00 <br>
-          ЧТ: 10:00 - 17:00 <br>
-          ПТ: 12:00 - 19:00 <br>
-          СБ: 11:00 - 18:00 <br>
-          НД: 10:00 - 17:00
-        </p>
-      </div>
-      <div class="footer__wrapper-nav">
-        <a href="#" class="footer__link-title">
-          <h5 class="footer__title">Головна</h5>
-        </a>
-        <nav class="footer__nav nav">
-          <ul class="nav__list nav__list--footer">
-            <li class="nav__item">
-              <a
-                href="#exhibitions"
-                class="nav__link nav__link--footer"
-              >
-                Виставки
-              </a>
-            </li>
-            <li class="nav__item ">
-              <a
-                href="#events"
-                class="nav__link nav__link--footer"
-              >
-                Події
-              </a>
-            </li>
-            <li class="nav__item">
-              <a
-                href="#news"
-                class="nav__link nav__link--footer"
-              >
-                Новини
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__privacy-terms">
-
-        <div class="footer__wrapper-legal">
-          <div class="footer__legal">© 2010 — 2020</div>
-          <div class="footer__legal">Privacy — Terms</div>
-        </div>
-
-        <a href="#" class="footer__up-arrow"></a>
-      </div>
-    </footer>
     <script src="scripts/main.js"></script>
   </body>
 </html>
