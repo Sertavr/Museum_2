@@ -24,6 +24,16 @@
     aspect-ratio: 1 / 1.27;
     object-fit: cover;
     object-position: 20% 50%;
+
+    @include on-tablet {
+      height: 420px;
+    }
+
+    @include on-desktop {
+      height: 484px;
+    }
+
+    @include hover(transform, scale(1.05));
   }
 
   &__title {
@@ -37,7 +47,7 @@
     @include on-tablet {
       margin-bottom: 40px;
     }
-    
+
     @include on-desktop {
       margin-bottom: 50px;
     }

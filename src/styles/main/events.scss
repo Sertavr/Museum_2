@@ -36,8 +36,16 @@
     width: 100%;
 
     @include on-tablet {
-      width: calc((100% - 30px) / 2);
+      height: 422px;
+      width: 330px;
     }
+
+    @include on-desktop {
+      height: 475px;
+      width: 370px;
+    }
+
+    @include hover(transform, scale(1.05));
   }
 
   &__wrapper-info {

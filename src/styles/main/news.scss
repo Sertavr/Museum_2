@@ -1,5 +1,4 @@
 .news {
-
   &--translate-left {
     opacity: 0;
     transform: translateX(-100px);
@@ -26,6 +25,18 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+
+    @include on-tablet {
+      height: 330px;
+      width: 330px;
+    }
+
+    @include on-desktop {
+      height: 370px;
+      width: 570px;
+    }
+
+    @include hover(transform, scale(1.05));
   }
 
   &__period {
